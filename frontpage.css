@@ -1,0 +1,120 @@
+body {
+    background-color: #1a1a2e;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:#0f0f1a;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #a64ac9;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hide the menu initially */
+    width: 250px;
+    height: 100%;
+    background-color: #0f0f1a;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: #333;
+}
+
+.side-menu .buttons {
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.demo-btn, .signup-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.demo-btn {
+    background-color: transparent;
+}
+
+.signup-btn {
+    background-color: #a64ac9;
+}
+
+.side-menu.open {
+    right: 0; /* Slide in the menu */
+}
+
+.main-content {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.main-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.main-content p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.animated-text::after {
+    content: "|";
+    animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .main-content h1 {
+        font-size: 36px;
+    }
+
+    .main-content p {
+        font-size: 18px;
+    }
+}
